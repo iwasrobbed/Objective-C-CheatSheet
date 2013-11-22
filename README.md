@@ -1634,7 +1634,7 @@ Declare a string constant, using the notification name as the string's value:
 
 ```objC
 // Remember to put the extern of this in the header file
-static NSString *const kRPAppDidResumeFromBackgroundNotification = @"RPAppDidResumeFromBackgroundNotification"; 
+NSString *const kRPAppDidResumeFromBackgroundNotification = @"RPAppDidResumeFromBackgroundNotification"; 
 ```
 
 Post notification:
