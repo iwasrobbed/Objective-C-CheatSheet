@@ -1495,6 +1495,8 @@ Assertions are used when you want to ensure that a value is what it is supposed 
 NSAssert(someCondition, @"The condition was false, so we are exiting the app.");
 ```
 
+>`Important:` Do not call functions with side effects in the condition parameter of this macro. The condition parameter is not evaluated when assertions are disabled, so if you call functions with side effects, those functions may never get called when you build the project in a non-debug configuration.
+
 ### Exceptions
 
 Exceptions are only used for programming or unexpected runtime errors.  Examples: attempting to access the 6th element of an array with 5 elements (out-of-bounds access), attempting to mutate immutable objects, or sending an invalid message to an object. You usually take care of these sorts of errors with exceptions when an application is being created rather than at runtime.
