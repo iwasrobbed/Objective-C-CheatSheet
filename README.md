@@ -43,7 +43,7 @@ Two ways of commenting:
 
 /* This is a block comment
    and it can span multiple lines. */
-   
+
 // You can also use it to comment out code
 /*
 - (SomeOtherClass *)doWork
@@ -55,7 +55,7 @@ Two ways of commenting:
 
 Using `pragma` to organize your code:
 ```objC
-#pragma mark - Use pragma mark to logically organize your code 
+#pragma mark - Use pragma mark to logically organize your code
 
 // Declare some methods or variables here
 
@@ -66,7 +66,7 @@ Using `pragma` to organize your code:
 
 [Back to top](#objective-c-cheat-sheet)
 
-## Data Types 
+## Data Types
 
 ### Size
 
@@ -84,7 +84,7 @@ For a complete guide to 64-bit changes, please [see the transition document](htt
 
 #### Integers
 
-Integers can be signed or unsigned.  When signed, they can be either positive or negative and when unsigned, they can only be positive.  Example: When declaring an `unsigned int`, the range of allowable integer values for a 32-bit compiler will shift from -2147483648 to +2147483647 to instead be 0 to +4294967295. 
+Integers can be signed or unsigned.  When signed, they can be either positive or negative and when unsigned, they can only be positive.  Example: When declaring an `unsigned int`, the range of allowable integer values for a 32-bit compiler will shift from -2147483648 to +2147483647 to instead be 0 to +4294967295.
 
 **Integer types with their accompanying byte sizes:**
 ```objC
@@ -187,13 +187,13 @@ SEL someSelector = @selector(someMethodName);
 **IMP** : Used to point to the memory address of the start of a method.  You will probably never need to use this.
 
 ```objC
-IMP theImplementation = [self methodForSelector:someSelector]; 
+IMP theImplementation = [self methodForSelector:someSelector];
 ```
 
 **BOOL** : Used to specify a boolean type where `0` is considered `NO` (false) and any non-zero value is considered `YES` (true).  Any `nil` object is also considered to be `NO` so there is no need to perform an equality check with `nil` (e.g. just write `if (someObject)` not `if (someObject != nil)`).
 
 ```objC
-// Boolean 
+// Boolean
 BOOL isBool = YES; // Or NO
 ```
 
@@ -244,7 +244,7 @@ typedef enum {
 
 ### Casting to Data Types
 
-Sometimes it is necessary to cast an `id` or different type into a specific class or data type.  Examples of this would be casting from a `float` to an `int` or from a `UITableViewCell` to a subclass such as `RPTableViewCell`.  
+Sometimes it is necessary to cast an `id` or different type into a specific class or data type.  Examples of this would be casting from a `float` to an `int` or from a `UITableViewCell` to a subclass such as `RPTableViewCell`.
 
 Casting non-object data types:
 
@@ -298,11 +298,11 @@ A static variable declared within a method retains its value between invocations
 
 Operator | Purpose
 :---: | :---:
-+ | Addition 
-- |	Subtraction
-* |	Multiplication
-/ |	Division
-% |	Modulo
++ | Addition
+- | Subtraction
+* | Multiplication
+/ | Division
+% | Modulo
 
 #### Relational and Equality Operators
 
@@ -433,7 +433,7 @@ static NSString *const kRPShortDateFormat = @"MM/dd/yyyy";
 @interface MyClass ()
 {
     int somePrivateInt;
-    
+
     // Re-declare as a private read-write version of the public read-only property
     @property (readwrite, nonatomic, strong) SomeClass *someProperty;
 }
@@ -540,8 +540,8 @@ Directive | Purpose
 
 Directive | Purpose
 :---: | ---
-@throw | Throws an exception 
-@try | Specifies a block of code to attempt 
+@throw | Throws an exception
+@try | Specifies a block of code to attempt
 @catch | Specifies what to do if an exception was thrown in the `@try` block
 @finally | Specifies code that runs whether an exception occurred or not
 
@@ -572,7 +572,7 @@ Directive | Purpose
 
 ## Literals
 
-Literals are compiler directives which provide a shorthand notation for creating common objects.  
+Literals are compiler directives which provide a shorthand notation for creating common objects.
 
 Syntax | What it does
 :---: | ---
@@ -643,7 +643,7 @@ Argument and return types are declared using type casting syntax:
 
 #### Calling Methods
 
-Methods are called using bracket syntax: `[self someMethod];` or `[self sometMethodWithObject:object];` 
+Methods are called using bracket syntax: `[self someMethod];` or `[self sometMethodWithObject:object];`
 
 `self` is a reference to the method's containing class.  The `self` variable is present in all Objective-C methods and it is one of two hidden arguments passed to code that implements a method, the other being `_cmd`, which identifies the received message.
 
@@ -652,7 +652,7 @@ At times, it is necessary to call a method in the superclass using `[super someM
 Under the hood, methods are implemented via message sending and they are turned into a variation of one of these two C functions:
 
 ```objC
-id objc_msgSend(id self, SEL op, ...); 
+id objc_msgSend(id self, SEL op, ...);
 id objc_msgSendSuper(struct objc_super *super, SEL op, ...);
 ```
 
@@ -710,12 +710,12 @@ Private properties are declared in an anonymous category, or class extension, in
 @end
 ```
 
-The LLVM compiler automatically synthesizes all properties so there is no longer a need to explicitly write `@synthesize` statements for properties anymore.  When a property is synthesized, accessors are created which allow you to set and get the value of a property.  
+The LLVM compiler automatically synthesizes all properties so there is no longer a need to explicitly write `@synthesize` statements for properties anymore.  When a property is synthesized, accessors are created which allow you to set and get the value of a property.
 
 Even though you may not see them since they are created at build time, a getter/setter pair can be shown as:
 
 ```objC
-- (BOOL)finished 
+- (BOOL)finished
 {
     return _finished;
 }
@@ -747,15 +747,15 @@ When a property is specified, it is given the syntax:
 @property (xxx) SomeClass *someProperty;
 ```
 
-where `xxx` can be a combination of: 
+where `xxx` can be a combination of:
 
 Type | What it does
 :---: | ---
 copy | Creates an immutable copy of the object upon assignment and is typically used for creating an immutable version of a mutable object.  Use this if you need the value of the object as it is at this moment, and you don't want that value to reflect any future changes made by other owners of the object.
 assign |  Generates a setter which assigns the value directly to the instance variable, rather than copying or retaining it.  This is typically used for creating properties for primitive types (`float`, `int`, `BOOL`, etc).
 weak | Variables that are `weak` can still point to objects but they do not become owners (or increase the retain count by 1). If the object's retain count drops to 0, the object will be deallocated from memory and the weak pointer will be set to `nil`.  It's best practice to create all delegates and `IBOutlet`'s as weak references since you do not own them.
-unsafe_unretained | An unsafe reference is similar to a `weak` reference in that it doesn't keep its related object alive, but it won’t be set to `nil` if the object is deallocated.  This can lead to crashes due to accessing that deallocated object and therefore you should use `weak` unless the OS or class does not support it.  
-strong | This is the default and is required when the attribute is a pointer to an object. The automatically generated setter will retain (i.e. increment the retain count of) the object and keep the object alive until released.  
+unsafe_unretained | An unsafe reference is similar to a `weak` reference in that it doesn't keep its related object alive, but it won’t be set to `nil` if the object is deallocated.  This can lead to crashes due to accessing that deallocated object and therefore you should use `weak` unless the OS or class does not support it.
+strong | This is the default and is required when the attribute is a pointer to an object. The automatically generated setter will retain (i.e. increment the retain count of) the object and keep the object alive until released.
 readonly | This only generates a getter method so it won't allow the property to be changed via the setter method.
 readwrite | This is the default and generates both a setter and a getter for the property.  Often times, a `readonly` property will be publicly defined and then a `readwrite` for the same property name will be privately redefined to allow mutation of the property value within that class only.
 atomic | This is the default and means that only one thread can access the property at a time (i.e. it's thread-safe) and is typically slower in performance to use.
@@ -779,7 +779,7 @@ self.myProperty
 Local variables exist only within the scope of a method.
 
 ```objC
-- (void)doWork 
+- (void)doWork
 {
    NSString *localStringVariable = @"Some local string variable.";
    [self doSomethingWithString:localStringVariable];
@@ -802,14 +802,14 @@ These both use `CapitalCase` where the first letter of every word is capitalized
 
 #### Methods
 
-These should use verbs if they perform some action (e.g. `performInBackground`).  You should be able to infer what is happening, what arguments a method takes, or what is being returned just by reading a method signature.  
+These should use verbs if they perform some action (e.g. `performInBackground`).  You should be able to infer what is happening, what arguments a method takes, or what is being returned just by reading a method signature.
 
-Example: 
+Example:
 
 ```objC
 // Correct
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{ 
+{
     // Code
 }
 
@@ -818,7 +818,7 @@ Example:
 {
     // Code
 }
-``` 
+```
 
 #### Properties and Local Variables
 
@@ -891,7 +891,7 @@ Since blocks strongly capture all variables within the scope of the block, you h
 }];
 ```
 
-In both of these cases, the object which performs the block owns the block, which also owns the object. This creates a loop, or a retain cycle, which means the memory is eventually leaked. 
+In both of these cases, the object which performs the block owns the block, which also owns the object. This creates a loop, or a retain cycle, which means the memory is eventually leaked.
 
 To get around this warning you can either refactor the code to be:
 
@@ -964,16 +964,16 @@ where `arrayOfPeople` can be any object that conforms to the `NSFastEnumeration`
 #### While Loop
 
 ```objC
-while (someTextCondition) { 
-   // Code to execute while the condition is true 
-} 
-``` 
-  
+while (someTextCondition) {
+   // Code to execute while the condition is true
+}
+```
+
 #### Do While Loop
 
 ```objC
 do {
-    // Code to execute while the condition is true 
+    // Code to execute while the condition is true
 } while (someTestCondition);
 ```
 
@@ -1036,9 +1036,9 @@ Approach | Difficulty | Purpose
 
 ### Inheritance
 
-Inheritance essentially allows you to create concrete [subclasses](#subclassing), which typically have specialized behavior, while inheriting all methods and properties from a superclass which are specified as `@public` or `@protected` within the superclass' header file.  
+Inheritance essentially allows you to create concrete [subclasses](#subclassing), which typically have specialized behavior, while inheriting all methods and properties from a superclass which are specified as `@public` or `@protected` within the superclass' header file.
 
-Looking through any framework or open source project, you can see the use of inheritance to not only get behavior for free, but to also consolidate code and allow it to be easily reused.  Examples of this approach can be seen with any of the mutable framework classes such as `NSMutableString` which is a subclass of `NSString`.    
+Looking through any framework or open source project, you can see the use of inheritance to not only get behavior for free, but to also consolidate code and allow it to be easily reused.  Examples of this approach can be seen with any of the mutable framework classes such as `NSMutableString` which is a subclass of `NSString`.
 
 In Objective-C, all objects have much of their behavior defined by the `NSObject` class through the act of class inheritance.  Without inheritance, you would have to implement common methods like object or class equality checks on your own and you'd end up with a lot of duplicate code across classes.
 
@@ -1062,7 +1062,7 @@ Categories are also useful to:
 * Declare informal protocols
 * Group related methods similar to having multiple classes
 * Break up a large class implementation into multiple categories, which helps with incremental compilation
-* Easily configure a class differently for different applications 
+* Easily configure a class differently for different applications
 
 #### Implementation
 
@@ -1149,11 +1149,11 @@ static char UIScrollViewMyCustomView;
 @end
 ```
 
-Let's explain a bit about what's happening here:  
+Let's explain a bit about what's happening here:
 
-* We create a static key called `UIScrollViewMyCustomView` that we can use to get and set the associated object.  Declaring it as `static` ensures that it is unique since it always points to the same memory address.  
+* We create a static key called `UIScrollViewMyCustomView` that we can use to get and set the associated object.  Declaring it as `static` ensures that it is unique since it always points to the same memory address.
 * Next, we declare the property we are adding as `@dynamic` which tells the compiler that the getter/setter is not implemented by the `UIScrollView` class itself.
-* Within the setter, we use `willChangeValueForKey` followed by `didChangeValueForKey` to ensure that we notify any key-value observers of a change to this property. 
+* Within the setter, we use `willChangeValueForKey` followed by `didChangeValueForKey` to ensure that we notify any key-value observers of a change to this property.
 * Within the setter, we use `objc_setAssociatedObject` to store a reference to the object that we really care about, `customView` under the static key that we created. `&` is used to denote that it is a pointer to a pointer to `UIScrollViewMyCustomView`
 * Within the getter, we retrieve the object reference using `objc_getAssociatedObject` and a pointer to the static key
 
@@ -1401,14 +1401,14 @@ Toyota.m
 - (void)startEngine
 {
     // Perform custom start sequence, different from the superclass
-    
+
     NSLog(@"Starting the engine.");
 }
 
 - (void)preventAccident
 {
     [self pressBrakePedal];
-    
+
     [self deployAirbags];
 }
 
@@ -1462,7 +1462,7 @@ If you're subclassing another class to override a method within that class, you 
 - (void)myMethod
 {
     [super myMethod];
-    
+
     // Provide your additional custom behavior here
 }
 ```
@@ -1615,12 +1615,12 @@ GroupViewController.m (the normal view)
 // Other implementation details left out, such as showing the modal view
 // and setting the delegate to self
 
-#pragma mark - AddPersonTableViewControllerDelegate 
+#pragma mark - AddPersonTableViewControllerDelegate
 
 - (void)didSelectPerson:(Person *)person
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    
+
     NSLog(@"Selected person: %@", person.fullName);
 }
 ```
@@ -1637,7 +1637,7 @@ Notifications are broadcast messages that are used to decouple classes and estab
 
 #### Registering Observers
 
-You can register to be notified when a certain event has happened, including system notifications, such as a `UITextField` which has begun editing.  
+You can register to be notified when a certain event has happened, including system notifications, such as a `UITextField` which has begun editing.
 
 ```objC
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldDidBeginEditing:)
@@ -1656,7 +1656,7 @@ A possible implementation of the `textFieldDidBeginEditing:` method could be:
     // Optional check to make sure the method was called from the notification
     if ([notification.name isEqualToString:UITextFieldTextDidBeginEditingNotification])
     {
-        // Do something 
+        // Do something
     }
 }
 ```
@@ -1686,7 +1686,7 @@ Declare a string constant, using the notification name as the string's value:
 
 ```objC
 // Remember to put the extern of this in the header file
-NSString *const kRPAppDidResumeFromBackgroundNotification = @"RPAppDidResumeFromBackgroundNotification"; 
+NSString *const kRPAppDidResumeFromBackgroundNotification = @"RPAppDidResumeFromBackgroundNotification";
 ```
 
 Post notification:
@@ -1741,7 +1741,7 @@ Always remember to call `synchronize` on the defaults instance to ensure they ar
 
 ```objC
 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-id someValue = [userDefaults valueForKey:@"RPSomeUserPreference"];    
+id someValue = [userDefaults valueForKey:@"RPSomeUserPreference"];
 ```
 
 There are also other convenience methods on `NSUserDefaults` instances such as `boolForKey:`, `stringForKey:`, etc.
@@ -1757,7 +1757,7 @@ Singleton's are a special kind of class where only one instance of the class exi
 To turn a class into a singleton, you place the following method into the implementation (`.m`) file, where the method name is prefixed with `shared` plus another word which best describes your class.  For example, if the class is a network or location manager, you would name the method `sharedManager` instead of `sharedInstance`.
 
 ```objC
-+ (instancetype)sharedInstance 
++ (instancetype)sharedInstance
 {
    static id sharedInstance = nil;
    static dispatch_once_t onceToken;
