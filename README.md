@@ -252,6 +252,9 @@ status != RPOptionTop;
 // toggle bit
 status ^= RPOptionTop;
 
+//set single bit to zero
+status &= ! RPOptionBottom;
+
 // check bit
 if(status & RPOtionTop)
 { [do Someting]; }
