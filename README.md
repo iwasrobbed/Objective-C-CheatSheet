@@ -242,6 +242,22 @@ typedef enum {
 } UITableViewCellStyle;
 ```
 
+#### Working with Bitmasks
+```objC
+// set bits (only valid if it makes sense that your status may have many of the bitmask values)
+RPBitMask status = RPOptionNone;
+status |= RPOptionBottom;
+status != RPOptionTop;
+
+// toggle bit
+status ^= RPOptionTop;
+
+// check bit
+if(status & RPOtionTop)
+{ [do Someting]; }
+
+```
+
 ### Casting to Data Types
 
 Sometimes it is necessary to cast an `id` or different type into a specific class or data type.  Examples of this would be casting from a `float` to an `int` or from a `UITableViewCell` to a subclass such as `RPTableViewCell`.
