@@ -243,22 +243,23 @@ typedef enum {
 ```
 
 #### Working with Bitmasks
+
 ```objC
-// set bits (only valid if it makes sense that your status may have many of the bitmask values)
+// Set bits (only valid if it makes sense that your status may have many of the bitmask values)
 RPBitMask status = RPOptionNone;
 status |= RPOptionBottom;
 status != RPOptionTop;
 
-// toggle bit
+// Toggle bit
 status ^= RPOptionTop;
 
-//set single bit to zero
+// Set single bit to zero
 status &= ! RPOptionBottom;
 
-// check bit
-if(status & RPOtionTop)
-{ [do Someting]; }
-
+// Check if it matches a certain bit
+if (status & RPOptionTop) { 
+    [self doSometing]; 
+}
 ```
 
 ### Casting to Data Types
