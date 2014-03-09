@@ -4,6 +4,10 @@
 
 This is not meant to be a beginner's guide or a detailed discussion about Objective-C; it is meant to be a quick reference to common, high level topics.  Please feel free to edit this document to update or improve upon it, making sure to keep with the general formatting of the document.  The list of contributors can be [found here](https://github.com/iwasrobbed/Objective-C-CheatSheet/graphs/contributors).
 
+For advanced Objective-C topics, these two sites are updated weekly:
+* http://www.objc.io
+* http://nshipster.com
+
 If something isn't mentioned here, it's probably covered in detail in one of these:
 
 * [The Objective-C Programming Language](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
