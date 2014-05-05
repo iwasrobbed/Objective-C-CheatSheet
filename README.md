@@ -13,6 +13,7 @@ If something isn't mentioned here, it's probably covered in detail in one of the
 * [The Objective-C Programming Language](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
 * [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * [iOS App Programming Guide](http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html)
+* [Cocoa Encyclopedia](https://developer.apple.com/library/mac/documentation/general/conceptual/CocoaEncyclopedia/)
 
 ### Table of Contents
 
