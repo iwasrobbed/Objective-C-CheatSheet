@@ -10,7 +10,8 @@ For advanced Objective-C topics, these two sites are updated weekly:
 
 If something isn't mentioned here, it's probably covered in detail in one of these:
 
-* NSHipster's "Fake" book aka concise usage examples of common Objective-C tasks: https://gumroad.com/l/the-nshipster-fake-book
+* [Swift, Apple's new language to replace Objective-C](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language)
+* [NSHipster's "Fake" book aka concise usage examples of common Objective-C tasks](https://gumroad.com/l/the-nshipster-fake-book)
 * [The Objective-C Programming Language](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
 * [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 * [iOS App Programming Guide](http://developer.apple.com/library/ios/#documentation/iphone/conceptual/iphoneosprogrammingguide/Introduction/Introduction.html)
