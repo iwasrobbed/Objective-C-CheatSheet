@@ -4,6 +4,9 @@
 
 This is not meant to be a beginner's guide or a detailed discussion about Objective-C; it is meant to be a quick reference to common, high level topics.  Please feel free to edit this document to update or improve upon it, making sure to keep with the general formatting of the document.  The list of contributors can be [found here](https://github.com/iwasrobbed/Objective-C-CheatSheet/graphs/contributors).
 
+To download a PDF version of this, use GitPrint.com:
+* https://gitprint.com/iwasrobbed/Objective-C-CheatSheet/blob/master/README.md?download
+
 For advanced Objective-C topics, these two sites are updated weekly:
 * http://www.objc.io
 * http://nshipster.com
