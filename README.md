@@ -360,8 +360,8 @@ Operator | Purpose
 += | Addition
 -= | Subtraction
 *= | Multiplication
-\/= | Division
-\%= | Modulo
+/= | Division
+%= | Modulo
 &= | Bitwise AND
 &#124;= | Bitwise Inclusive OR
 ^= | Exclusive OR
