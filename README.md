@@ -540,6 +540,13 @@ Directive | Purpose
 #undef | Used to undefine and redefine macros
 #warning | Used to flag a warning line in code
 
+####Special operator
+
+The special operator `defined` is used in `#if` and `#elif` expressions to test whether a certain name is defined as a macro.
+
+`defined` is useful when you wish to test more than one macro for existence at once. For example, `#if defined(__IPHONE_8_0) || defined(__MAC_10_9)`
+would succeed if either of the names `__IPHONE_8_0` or `__MAC_10_9` is defined as a macro.
+
 [Back to top](#objective-c-cheat-sheet)
 
 ## Compiler Directives
