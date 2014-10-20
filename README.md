@@ -463,10 +463,10 @@ static NSString *const kRPShortDateFormat = @"MM/dd/yyyy";
 @interface MyClass ()
 {
     int somePrivateInt;
-
-    // Re-declare as a private read-write version of the public read-only property
-    @property (readwrite, nonatomic, strong) SomeClass *someProperty;
 }
+// Re-declare as a private read-write version of the public read-only property
+@property (readwrite, nonatomic, strong) SomeClass *someProperty;
+
 @end
 
 @implementation MyClass
