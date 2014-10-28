@@ -795,8 +795,8 @@ unsafe_unretained | An unsafe reference is similar to a `weak` reference in that
 strong | This is the default and is required when the attribute is a pointer to an object. The automatically generated setter will retain (i.e. increment the retain count of) the object and keep the object alive until released.
 readonly | This only generates a getter method so it won't allow the property to be changed via the setter method.
 readwrite | This is the default and generates both a setter and a getter for the property.  Often times, a `readonly` property will be publicly defined and then a `readwrite` for the same property name will be privately redefined to allow mutation of the property value within that class only.
-atomic | This is the default and means that any access operation is guaranteed to be uninterrupted by antoher thread and is typically slower in performance to use.
-nonatomic | This is used to provide quicker (but thus interruptable) access operations and is typically faster in performance to use.
+atomic | This is the default and means that any access operation is guaranteed to be uninterrupted by another thread and is typically slower in performance to use.
+nonatomic | This is used to provide quicker (but thus interruptable) access operations.
 getter=method | Used to specify a different name for the property's getter method.  This is typically done for boolean properties (e.g. `getter=isFinished`)
 setter=method | Used to specify a different name for the property's setter method. (e.g. `setter=setProjectAsFinished`)
 
