@@ -465,10 +465,10 @@ static NSString *const kRPShortDateFormat = @"MM/dd/yyyy";
 @interface MyClass ()
 {
     int somePrivateInt;
-
-    // Re-declare as a private read-write version of the public read-only property
-    @property (readwrite, nonatomic, strong) SomeClass *someProperty;
 }
+// Re-declare as a private read-write version of the public read-only property
+@property (readwrite, nonatomic, strong) SomeClass *someProperty;
+
 @end
 
 @implementation MyClass
@@ -734,12 +734,12 @@ Private properties are declared in an anonymous category, or class extension, in
 {
     // Instance variable
     int somePrivateInteger;
-
-    // Private properties
-    @property (nonatomic, strong) NSString *firstName;
-    @property (nonatomic, strong) NSString *lastName;
-    @property (readwrite, nonatomic, strong) NSString *fullName;
 }
+// Private properties
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
+@property (readwrite, nonatomic, strong) NSString *fullName;
+
 @end
 
 @implementation MyClass
@@ -797,8 +797,8 @@ unsafe_unretained | An unsafe reference is similar to a `weak` reference in that
 strong | This is the default and is required when the attribute is a pointer to an object. The automatically generated setter will retain (i.e. increment the retain count of) the object and keep the object alive until released.
 readonly | This only generates a getter method so it won't allow the property to be changed via the setter method.
 readwrite | This is the default and generates both a setter and a getter for the property.  Often times, a `readonly` property will be publicly defined and then a `readwrite` for the same property name will be privately redefined to allow mutation of the property value within that class only.
-atomic | This is the default and means that only one thread can access the property at a time (i.e. it's thread-safe) and is typically slower in performance to use.
-nonatomic | This is used to allow multiple threads to access the property at a time. (i.e. it's **NOT** thread-safe) and is typically faster in performance to use.
+atomic | This is the default and means that any access operation is guaranteed to be uninterrupted by another thread and is typically slower in performance to use.
+nonatomic | This is used to provide quicker (but thus interruptable) access operations.
 getter=method | Used to specify a different name for the property's getter method.  This is typically done for boolean properties (e.g. `getter=isFinished`)
 setter=method | Used to specify a different name for the property's setter method. (e.g. `setter=setProjectAsFinished`)
 
