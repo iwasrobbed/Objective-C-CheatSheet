@@ -1,13 +1,12 @@
 ## Objective-C Cheat Sheet
 
-Support this project via Gratipay <a href="https://gratipay.com/iwasrobbed/"><img src="http://img.shields.io/gratipay/iwasrobbed.svg"></a>
+This is not meant to be a beginner's guide or a detailed discussion about Objective-C; it is meant to be a quick reference to common, high level topics.
 
-**Note**: I wrote this over a stretch of 3 days, so it could probably use some editing and clarifications where necessary.
+* Read my [Swift](https://github.com/iwasrobbed/Swift-CheatSheet) cheatsheet as well.
+* Support this project via Gratipay <a href="https://gratipay.com/iwasrobbed/"><img src="http://img.shields.io/gratipay/iwasrobbed.svg"></a>
+* To download a PDF version of this, use [GitPrint.com](https://gitprint.com/iwasrobbed/Objective-C-CheatSheet/blob/master/README.md?download)
 
-This is not meant to be a beginner's guide or a detailed discussion about Objective-C; it is meant to be a quick reference to common, high level topics.  Please feel free to edit this document to update or improve upon it, making sure to keep with the general formatting of the document.  The list of contributors can be [found here](https://github.com/iwasrobbed/Objective-C-CheatSheet/graphs/contributors).
-
-To download a PDF version of this, use GitPrint.com:
-* https://gitprint.com/iwasrobbed/Objective-C-CheatSheet/blob/master/README.md?download
+**Note**: I wrote this over a stretch of 3 days, so it could probably use some editing and clarifications where necessary. Please feel free to edit this document to update or improve upon it, making sure to keep with the general formatting of the document.  The list of contributors can be [found here](https://github.com/iwasrobbed/Objective-C-CheatSheet/graphs/contributors).
 
 For advanced Objective-C topics, these two sites are updated weekly:
 * http://www.objc.io
