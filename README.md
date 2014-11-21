@@ -2,7 +2,7 @@
 
 This is not meant to be a beginner's guide or a detailed discussion about Objective-C; it is meant to be a quick reference to common, high level topics.
 
-* Read my [Swift](https://github.com/iwasrobbed/Swift-CheatSheet) cheatsheet as well.
+* Read my [Swift](https://github.com/iwasrobbed/Swift-CheatSheet) cheatsheet as well (Swift will replace Objective-C for iOS apps).
 * Support this project via Gratipay <a href="https://gratipay.com/iwasrobbed/"><img src="http://img.shields.io/gratipay/iwasrobbed.svg"></a>
 * To download a PDF version of this, use [GitPrint.com](https://gitprint.com/iwasrobbed/Objective-C-CheatSheet/blob/master/README.md?download)
 
