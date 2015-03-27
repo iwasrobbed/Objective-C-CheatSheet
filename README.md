@@ -605,6 +605,7 @@ Directive | Purpose
 @encode(spec) | Yields a character string that encodes the type structure of `spec`
 @compatibility_alias | Allows you to define an alias name for an existing class.
 @defs(classname) | Yields the internal data structure of `classname` instances
+@import | Imports a module and autolinks its framework (currently for Apple frameworks only)
 
 [Back to top](#objective-c-cheat-sheet)
 
