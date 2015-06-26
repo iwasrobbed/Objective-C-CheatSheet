@@ -1039,7 +1039,7 @@ switch (errorStatusCode)
 }
 ```
 
-Beware, `switch` is fallthrough: when control reaches matched `case` (or `default` block if nothing matches), it continues execution of statements next in the source code (including `default`) until `break` statement or the end of `switch` is reached.  This also allows multiple values to match the same point without any special syntax: they are just listed with empty bodies.
+Note: `switch` statements are fallthrough: when control reaches the matched `case` (or `default` block if nothing matches), it continues execution of the next statements in the source code (including `default`) until the `break` statement or the end of `switch` is reached.  This also allows multiple values to match the same point without any special syntax; they are just listed with empty bodies.
 
 #### Exiting Loops
 
