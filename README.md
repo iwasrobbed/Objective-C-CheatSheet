@@ -1039,6 +1039,8 @@ switch (errorStatusCode)
 }
 ```
 
+Beware, `switch` is fallthrough: when control reaches matched `case` (or `default` block if nothing matches), it continues execution of statements next in the source code (including `default`) until `break` statement or the end of `switch` is reached.  This also allows multiple values to match the same point without any special syntax: they are just listed with empty bodies.
+
 #### Exiting Loops
 
 * `return` : Stops execution and returns to the calling function.  It can also be used to return a value from a method.
