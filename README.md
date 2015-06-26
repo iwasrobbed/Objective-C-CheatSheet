@@ -1027,11 +1027,11 @@ switch (errorStatusCode)
         // Code to execute if it matches
         break;
 
-     case kRPWifiErrorCode:
+    case kRPWifiErrorCode:
         // Code to execute if it matches
         break;
 
-     default:
+    default:
         // Code to execute if nothing else matched
         break;
 }
