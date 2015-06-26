@@ -1023,11 +1023,13 @@ Switch statements are often used in place of `if` statements if there is a need 
 ```objC
 switch (errorStatusCode)
 {
-    case kRPNetworkErrorCode:
+    case kRPServerErrorCode:
         // Code to execute if it matches
         break;
 
+    case kRPNetworkErrorCode:
     case kRPWifiErrorCode:
+    case kRPSystemErrorCode:
         // Code to execute if it matches
         break;
 
