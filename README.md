@@ -1777,10 +1777,7 @@ User defaults are basically a way of storing simple preference values which can 
 ```objC
 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
 [userDefaults setValue:@"Some value" forKey:@"RPSomeUserPreference"];
-[userDefaults synchronize];
 ```
-
-Always remember to call `synchronize` on the defaults instance to ensure they are saved properly.
 
 ### Retrieving Values
 
