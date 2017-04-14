@@ -329,80 +329,80 @@ A static variable declared within a method retains its value between invocations
 
 Operator | Purpose
 :---: | :---:
-+ | Addition
-- | Subtraction
-* | Multiplication
-/ | Division
-% | Modulo
+| + | Addition
+| - | Subtraction
+| * | Multiplication
+| / | Division
+| % | Modulo
 
 #### Relational and Equality Operators
 
 Operator | Purpose
 :---: | :---:
-== | Equal to
-!= | Not equal to
-> | Greater than
-< | Less than
->= | Greater than or equal to
-<= | Less than or equal to
+| == | Equal to
+| != | Not equal to
+| > | Greater than
+| < | Less than
+| >= | Greater than or equal to
+| <= | Less than or equal to
 
 #### Logical Operators
 
 Operator | Purpose
 :---: | :---:
-! | NOT
-&& | Logical AND
-&#124;&#124; | Logical OR
+| ! | NOT
+| && | Logical AND
+| &#124;&#124; | Logical OR
 
 #### Compound Assignment Operators
 
 Operator | Purpose
 :---: | :---:
-+= | Addition
--= | Subtraction
-*= | Multiplication
-/= | Division
-%= | Modulo
-&= | Bitwise AND
-&#124;= | Bitwise Inclusive OR
-^= | Exclusive OR
-<<= | Shift Left
->>= | Shift Right
+| += | Addition
+| -= | Subtraction
+| *= | Multiplication
+| /= | Division
+| %= | Modulo
+| &= | Bitwise AND
+| &#124;= | Bitwise Inclusive OR
+| ^= | Exclusive OR
+| <<= | Shift Left
+| >>= | Shift Right
 
 #### Increment and Decrement Operators
 
 Operator | Purpose
 :---: | :---:
-++ | Addition
--- | Subtraction
-*= | Multiplication
-/= | Division
-%= | Modulo
-&= | Bitwise AND
-&#124;= | Bitwise Inclusive OR
-^= | Exclusive OR
-<<= | Shift Left
->>= | Shift Right
+| ++ | Addition
+| -- | Subtraction
+| *= | Multiplication
+| /= | Division
+| %= | Modulo
+| &= | Bitwise AND
+| &#124;= | Bitwise Inclusive OR
+| ^= | Exclusive OR
+| <<= | Shift Left
+| >>= | Shift Right
 
 #### Bitwise Operators
 
 Operator | Purpose
 :---: | :---:
-& | Bitwise AND
-&#124; | Bitwise Inclusive OR
-^ | Exclusive OR
-~ | Unary complement (bit inversion)
-<< | Shift Left
->> | Shift Right
+| & | Bitwise AND
+| &#124; | Bitwise Inclusive OR
+| ^ | Exclusive OR
+| ~ | Unary complement (bit inversion)
+| << | Shift Left
+| >> | Shift Right
 
 #### Other operators
 
 Operator | Purpose
 :---: | :---:
-() | Cast
-? : | Conditional
-& | Memory Address
-* | Pointer
+| () | Cast
+| ? : | Conditional
+| & | Memory Address
+| * | Pointer
 
 [Back to top](#objective-c-cheat-sheet)
 
