@@ -8,9 +8,10 @@ This is not meant to be a beginner's guide or a detailed discussion about Object
 
 **Note**: I wrote this over a stretch of 3 days, so it could probably use some editing and clarifications where necessary. Please feel free to edit this document to update or improve upon it, making sure to keep with the general formatting of the document.  The list of contributors can be [found here](https://github.com/iwasrobbed/Objective-C-CheatSheet/graphs/contributors).
 
-For advanced Objective-C topics, these two sites are updated weekly:
+For advanced Objective-C topics, these three sites are updated weekly:
 * http://www.objc.io
 * http://nshipster.com
+* https://iosdevweekly.com
 
 If something isn't mentioned here, it's probably covered in detail in one of these:
 
