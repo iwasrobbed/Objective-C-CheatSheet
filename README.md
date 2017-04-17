@@ -541,7 +541,7 @@ Directive | Purpose
 #undef | Used to undefine and redefine macros
 #warning | Used to flag a warning line in code
 
-####Special operator
+#### Special operator
 
 The special operator `defined` is used in `#if` and `#elif` expressions to test whether a certain name is defined as a macro.
 
