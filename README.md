@@ -527,21 +527,21 @@ This section needs a lot of love, so please feel free to improve upon it!
 
 Directive | Purpose
 :---: | ---
-#define | Used to define constants or macros that are replaced by the compiler at runtime
-#elif | An `else if` conditional statement
-#else | An `else` conditional statement
-#endif | An `end if` conditional statement
-#error | Used to flag an error line in code
-#if | An `if` conditional statement
-#ifdef | An `if defined` conditional statement
-#ifndef | An `if not defined` conditional statement
-#import | Imports a header file. This directive is identical to `#include`, except that it won't include the same file more than once
-#include | Includes a header file
-#pragma | Used for commenting code or inhibiting compiler warnings
-#undef | Used to undefine and redefine macros
-#warning | Used to flag a warning line in code
+# define | Used to define constants or macros that are replaced by the compiler at runtime
+# elif | An `else if` conditional statement
+# else | An `else` conditional statement
+# endif | An `end if` conditional statement
+# error | Used to flag an error line in code
+# if | An `if` conditional statement
+# ifdef | An `if defined` conditional statement
+# ifndef | An `if not defined` conditional statement
+# import | Imports a header file. This directive is identical to `#include`, except that it won't include the same file more than once
+# include | Includes a header file
+# pragma | Used for commenting code or inhibiting compiler warnings
+# undef | Used to undefine and redefine macros
+# warning | Used to flag a warning line in code
 
-####Special operator
+#### Special operator
 
 The special operator `defined` is used in `#if` and `#elif` expressions to test whether a certain name is defined as a macro.
 
