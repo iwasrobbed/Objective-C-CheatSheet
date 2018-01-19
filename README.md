@@ -114,8 +114,8 @@ unsigned int anUnsignedInt = 4294967295;
 NSLog(@"int size: %zu", sizeof(int));
 
 // Long (4 bytes for 32-bit, 8 bytes for 64-bit)
-long aLong = -9223372036854775808; // 32-bit
-unsigned long anUnsignedLong = 18446744073709551615; // 32-bit
+long aLong = -9223372036854775808; // 64-bit
+unsigned long anUnsignedLong = 18446744073709551615; // 64-bit
 NSLog(@"long size: %zu", sizeof(long));
 
 // Long Long (8 bytes for both 32-bit and 64-bit)
