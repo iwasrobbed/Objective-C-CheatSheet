@@ -1228,10 +1228,11 @@ In the section about [declaring classes](#declaring-classes), it shows how the p
 @interface MyClass ()
 {
     int somePrivateInt;
-
-    // Re-declare as a private read-write version of the public read-only property
-    @property (readwrite, nonatomic, strong) SomeClass *someProperty;
 }
+
+// Re-declare as a private read-write version of the public read-only property
+@property (readwrite, nonatomic, strong) SomeClass *someProperty;
+
 @end
 ```
 
